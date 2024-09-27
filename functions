@@ -111,7 +111,7 @@ std::string age (int x)
         std::string s = s_x + " год";
         return s;
     }
-    else if ((x % 10 == 2 || x % 10 == 3 || x % 10 == 4) && (x != 12 || x != 13 || x != 14))
+    else if ((x != 12 && x % 10 == 2)||(x != 13 && x % 10 == 3) || (x % 10 == 4 && x != 14))
     {
         ss << x;
         std::string s_x = ss.str();
@@ -307,6 +307,7 @@ int main() {
             std::cout<<"Введитие число. Функция нарисует треугольник высотой равной числу \n";
             std::cin>>leftTriangle_x;
             leftTriangle(leftTriangle_x);
+            break;
         }
         default:
             std::cout<<"Неверная команда";
