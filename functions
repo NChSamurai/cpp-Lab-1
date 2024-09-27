@@ -207,3 +207,109 @@ void leftTriangle (int x)
         trio += "*";
     }
 }
+
+int main() {
+    std::cout<<"Выберите функцию для выполнения \n sumLastNums -- 1 \n isPositive -- 2 \n isUpperCase -- 3\n isDivisor -- 4 \n safeDiv -- 5 \n makeDecision -- 6\n sum3 -- 7\n string age -- 8\n printDays -- 9 \n reverseListNums -- 10 \n pow -- 11 \n equalNum -- 12 \n leftTriangle -- 13 \n";
+    int choice;
+    std::cin>>choice;
+    
+    switch(choice)
+    {
+        case 1:
+            int sumLastNums_x;
+            std::cout<<"Введитие число. Функция вернет результат сложения двух полседних цифр \n";
+            std::cin>>sumLastNums_x;
+            std::cout<<"Ответ -- "<<sumLastNums(sumLastNums_x);
+            break;
+        
+        case 2:
+            int isPositive_x;
+            std::cout<<"Введитие число. Функция выведет true если число положительное \n";
+            std::cin>>isPositive_x;
+            std::cout<<"Ответ -- "<<std::boolalpha<<isPositive(isPositive_x);
+            break;
+        
+        case 3:
+            char isUpperCase_x;
+            std::cout<<"Введитие букву. Функция выведет true если буква большая латинская \n";
+            std::cin>>isUpperCase_x;
+            std::cout<<"Ответ -- "<<std::boolalpha<<isUpperCase(isUpperCase_x);
+            break;
+        
+        case 4:
+            int isDivisor_x,isDivisor_y;
+            std::cout<<"Введитие два числа. Функция выведет true если одно из чисел можно поделить на другое \n";
+            std::cin>>isDivisor_x>>isDivisor_y;
+            std::cout<<"Ответ -- "<<std::boolalpha<<isDivisor(isDivisor_x,isDivisor_y);
+            break;
+        
+        case 5:
+            int safeDiv_x,safeDiv_y;
+            std::cout<<"Введитие  два числа. Функция безопасно разделит с учетом невозмножности деления на 0  \n";
+            std::cin>>safeDiv_x>>safeDiv_y;
+            std::cout<<"Ответ -- "<<safeDiv(safeDiv_x,safeDiv_y);
+            break;
+        
+        case 6:
+            int makeDecision_x,makeDecision_y;
+            std::cout<<"Введитие два числа. Функция вернет эти числа со знаком > < = \n";
+            std::cin>>makeDecision_x>>makeDecision_y;
+            std::cout<<"Ответ -- "<<makeDecision(makeDecision_x,makeDecision_y);
+            break;
+        
+        case 7:
+            int sum3_x,sum3_y,sum3_z;
+            std::cout<<"Введитие три числа. Функция выведет true если релуьтат сложения двух из этих чисел будет равен третьему числу \n";
+            std::cin>>sum3_x>>sum3_y>>sum3_z;
+            std::cout<<"Ответ -- "<<std::boolalpha<<sum3(sum3_x,sum3_y,sum3_z);
+            break;
+        
+        case 8:
+            int age_x;
+            std::cout<<"Введитие число. Функция выведет коректное написание года для этого числа \n";
+            std::cin>>age_x;
+            std::cout<<"Ответ -- "<<age(age_x);
+            break;
+        
+        case 9:
+        {
+            std::string printDays_x;
+            std::cout<<"Введитие день недели. Функция выведет все остальные дни до конца недели \n";
+            std::cin>>printDays_x;
+            std::cout<<"Ответ -- ";
+            printDays(printDays_x);
+            break;
+        }
+        case 10:
+            int reverseListNums_x;
+            std::cout<<"Введитие число. Функция выведет все числа от этого числа до 0 \n";
+            std::cin>>reverseListNums_x;
+            std::cout<<"Ответ -- "<<reverseListNums(reverseListNums_x);
+            break;
+        
+        case 11:
+            int pow_x,pow_y;
+            std::cout<<"Введитие два числа. Функция возведет первое число в степень равную второму числу \n";
+            std::cin>>pow_x>>pow_y;
+            std::cout<<"Ответ -- "<<pow(pow_x,pow_y);
+            break;
+        
+        case 12:
+            int equalNum_x;
+            std::cout<<"Введитие число. Функция выведет true если все цифры числа одиноковые \n";
+            std::cin>>equalNum_x;
+            std::cout<<"Ответ -- "<<std::boolalpha<<equalNum(equalNum_x);
+            break;
+            
+        case 13:
+        {
+            int leftTriangle_x;
+            std::cout<<"Введитие число. Функция нарисует треугольник высотой равной числу \n";
+            std::cin>>leftTriangle_x;
+            leftTriangle(leftTriangle_x);
+        }
+        default:
+            std::cout<<"Неверная команда";
+    }
+    return 0;
+}
